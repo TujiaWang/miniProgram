@@ -1,0 +1,3 @@
+<!--pages/auth/auth.wxml-->
+<button bindtap="sendAuth"> 获取授权 </button>
+<auth id="auth"></auth>

@@ -1,0 +1,21 @@
+<!--components/auth/auth.wxml-->
+<view class='box' wx:if="{{authShow}}">
+    <view class='pop'>
+        <view class='top'>微信授权</view>
+        <view class='center'>
+            <view class='explain'>
+                <text>xxx申请获得以下权限：</text>
+            </view>
+            <view class='tip'>
+                <view class='dian'></view>
+                <text>同意此应用访问你的功能</text>
+            </view>
+        </view>
+        <view class='bottom'>
+            <button bindtap='popClose' class="authDeny">拒绝</button>
+            <button open-type="getUserInfo" wx:if="{{authType=='userInfo'}}" bindgetuserinfo="handleGetUserInfo">允许</button>
+            <button open-type="getPhoneNumber" wx:elif="{{authType=='phoneNumber'}}" bindgetphonenumber="handleGetPhoneNumber">允许</button>
+            <button open-type="openSetting" wx:elif="{{authType=='setting'}}" bindopensetting="handleOpenSetting">允许</button>
+        </view>
+    </view>
+</view>
