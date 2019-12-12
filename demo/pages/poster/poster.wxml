@@ -1,2 +1,19 @@
 <!--pages/poster/poster.wxml-->
-<text>pages/poster/poster.wxml</text>
+<view class="contents">
+    <swiper previous-margin='94rpx' next-margin='94rpx' current="{{current}}">
+        <swiper-item wx:for="{{banners}}" wx:key="index">
+            <view class="item-wrapper">
+                <image class="swiper-bg" src="{{item.img}}"></image>
+                <view class="userinfo">
+                    <image src="{{userInfo.avatarUrl}}"></image>
+                    <view>{{userInfo.nickName}}</view>
+                </view>
+                <image class="mini-qrcode" src="{{userInfo.avatarUrl}}"></image>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="bottom">
+    <button type="primary" bindtap="savePoster">保存海报</button>
+</view>
+<auth id="auth"></auth>

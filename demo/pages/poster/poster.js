@@ -1,66 +1,56 @@
 // pages/poster/poster.js
+let poster = require('../../utils/post.js');
+const app = getApp();
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        current:1,
+        banners:[
+            {
+                img:'../../images/bg1.jpg'
+            },
+            {
+                img: '../../images/bg2.jpg'
+            },
+            {
+                img: '../../images/bg3.jpg'
+            },
+            {
+                img: '../../images/bg4.jpg'
+            }
+        ],
+        userInfo:{
+            avatarUrl:'',
+            nickName:''
+        }
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
-
+        let self = this;
+        this.authorize = this.selectComponent("#auth");
+        this.authorize.checkAuth('userInfo', (res) => {
+            self.setData({
+                userInfo: JSON.parse(res.rawData)
+            })
+        });
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    savePoster(){
+        let self = this;
+        this.authorize.checkAuth('writePhotosAlbum', (res) => {
+            let config = {
+                canvasId: 'hoCanvas',
+                windowWidth: app.globalData.systemInfo.windowWidth, // 可使用窗口宽度
+                visualWidth: 500, // 海报设计稿的宽度
+                visualHeight: 900, // 海报设计稿的高度
+                backgroundImage: self.data.banners[self.data.current].img, // 海报的背景图
+                rate: 2, // 生成海报图时放大的倍数
+                imgs: [
+                    { imgPath: self.data.userInfo.avatarUrl, width: 80, left: 400, top: 780 }, // 绘制二维码
+                    { imgPath: self.data.userInfo.avatarUrl, width: 60, left: 20, top: 20 } // 绘制用户头像
+                ],
+                texts: [
+                    { label: self.data.userInfo.nickName, color: '#333', fontSize: 20, left: 100, top: 50 } // 绘制用户昵称
+                ]
+            }
+            poster.initPoster(config);
+        });
     }
 })
