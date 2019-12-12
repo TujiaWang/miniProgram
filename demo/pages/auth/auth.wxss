@@ -1,1 +1,4 @@
 /* pages/auth/auth.wxss */
+.menus button{
+    margin: 20rpx;
+}

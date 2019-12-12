@@ -1,3 +1,27 @@
 <!--pages/auth/auth.wxml-->
-<button bindtap="sendAuth"> 获取授权 </button>
+<view class="menus">
+    <view>
+        <button type="primary" bindtap="sendAuth" data-scope="userInfo">获取用户信息</button>
+        <button type="primary" bindtap="sendAuth" data-scope="phoneNumber">获取绑定的手机号</button>
+    </view>
+    <view>
+        <button type="primary" bindtap="sendAuth" data-scope="writePhotosAlbum">保存到相册</button>
+        <button type="primary" bindtap="sendAuth" data-scope="camera">摄像头</button>
+    </view>
+    <view>
+        <button bindtap="sendAuth" data-scope="userLocation">获取用户位置</button>
+        <button bindtap="sendAuth" data-scope="userLocationBackground">获取后台定位</button>
+    </view>
+    <view>
+        <button bindtap="sendAuth" data-scope="address">获取通讯地址</button>
+        <button bindtap="sendAuth" data-scope="invoiceTitle">获取发票抬头</button>
+    </view>
+    <view>
+        <button bindtap="sendAuth" data-scope="invoice">获取发票</button>
+        <button bindtap="sendAuth" data-scope="werun">获取微信运动步数</button>
+    </view>
+    <view>
+        <button bindtap="sendAuth" data-scope="record">获取录音功能</button>
+    </view>
+</view>
 <auth id="auth"></auth>

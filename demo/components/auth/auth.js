@@ -4,7 +4,20 @@ Component({
         authShow: false,
         authType: '',
         scope: '',
-        callBack: null
+        callBack: null,
+        authTypeCN:{
+            userInfo:'用户信息',
+            userLocation:'地理位置',
+            userLocationBackground:'后台定位',
+            address:'通讯地址',
+            invoiceTitle:'发票抬头',
+            invoice:'获取发票',
+            werun:'微信运动步数',
+            record:'录音',
+            writePhotosAlbum:'保存到相册',
+            camera:'摄像头',
+            phoneNumber:'绑定手机号'
+        }
     },
     methods: {
         popClose() {

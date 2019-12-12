@@ -1,0 +1,16 @@
+/* pages/open/open.wxss */
+.item{
+    height: 100rpx;
+    background: #f8f8f8;
+    margin-bottom: 20rpx;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+.item-content{
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+.options-btn button{
+    margin-top: 20rpx;
+}

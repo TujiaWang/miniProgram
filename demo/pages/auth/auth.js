@@ -6,8 +6,8 @@ Page({
     onLoad: function (options) {
         this.authorize = this.selectComponent("#auth");
     },
-    sendAuth() {
-        this.authorize.checkAuth('userInfo', (res) => {
+    sendAuth(e) {
+        this.authorize.checkAuth(e.currentTarget.dataset.scope, (res) => {
             console.log(res)
         });
     }

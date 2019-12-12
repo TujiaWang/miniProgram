@@ -1,14 +1,24 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/auth/auth",
-        "pages/index/index"
-        
+        "pages/open/open",
+        "pages/poster/poster"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
+        "navigationBarTitleText": "常用代码库",
         "navigationBarTextStyle": "black"
     },
+    "permission":{
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "requiredBackgroundModes": [
+        "audio",
+        "location"
+    ],
     "sitemapLocation": "sitemap.json"
 }

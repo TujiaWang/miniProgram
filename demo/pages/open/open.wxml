@@ -1,0 +1,27 @@
+<!--pages/open/open.wxml-->
+<view class="container">
+    <view>
+        <view class="item">
+            <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-index="0" data-id="111">
+                <view class="item-content">左滑可以删除</view>
+            </mp-slideview>
+        </view>
+        <view class="item">
+            <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-index="1" data-id="2222">
+                <view class="item-content">左滑可以删除</view>
+            </mp-slideview>
+        </view>
+    </view>
+
+
+    <mp-actionsheet bindactiontap="handleBtnClick" show="{{showActionsheet}}" actions="{{groups}}" title="这是一个标题，可以为一行或者两行。">
+    </mp-actionsheet>
+
+    <mp-halfScreenDialog bindbuttontap="buttontap" show="{{show}}" maskClosable="{{true}}" title="测试标题B" subTitle="测试标题B的副标题" desc="辅助描述内容，可根据实际需要安排" tips="辅助提示内容，可根据实际需要安排" buttons="{{buttons}}"></mp-halfScreenDialog>
+
+
+    <view class="options-btn">
+        <button type="primary" bindtap="btnClick">底部弹出选项菜</button>
+        <button type="primary" bindtap="open">底部弹出操作菜单</button>
+    </view>
+</view>

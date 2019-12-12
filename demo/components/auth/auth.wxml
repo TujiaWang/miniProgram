@@ -4,11 +4,11 @@
         <view class='top'>微信授权</view>
         <view class='center'>
             <view class='explain'>
-                <text>xxx申请获得以下权限：</text>
+                <text>常用代码库申请获得以下权限：</text>
             </view>
             <view class='tip'>
                 <view class='dian'></view>
-                <text>同意此应用访问你的功能</text>
+                <text>同意此应用获取{{authTypeCN[scope]}}功能</text>
             </view>
         </view>
         <view class='bottom'>
