@@ -59,3 +59,11 @@ page{
 .bottom {
     padding: 20rpx;
 }
+
+#poster{
+    width: 1000rpx;
+    height: 1800rpx;
+    position: absolute;
+    left: 999999rpx;
+    top: 99999999rpx;
+}

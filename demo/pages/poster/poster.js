@@ -6,7 +6,7 @@ Page({
         current:1,
         banners:[
             {
-                img:'../../images/bg1.jpg'
+                img:'../../images/bg1.jpg' // 地址需提供网络地址
             },
             {
                 img: '../../images/bg2.jpg'
@@ -36,7 +36,7 @@ Page({
         let self = this;
         this.authorize.checkAuth('writePhotosAlbum', (res) => {
             let config = {
-                canvasId: 'hoCanvas',
+                canvasId: 'poster',
                 windowWidth: app.globalData.systemInfo.windowWidth, // 可使用窗口宽度
                 visualWidth: 500, // 海报设计稿的宽度
                 visualHeight: 900, // 海报设计稿的高度

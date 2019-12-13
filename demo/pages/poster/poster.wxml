@@ -17,3 +17,5 @@
     <button type="primary" bindtap="savePoster">保存海报</button>
 </view>
 <auth id="auth"></auth>
+
+<canvas canvas-id="poster" id="poster"></canvas>
