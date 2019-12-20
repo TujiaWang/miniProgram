@@ -9,4 +9,7 @@
   <navigator hover-class="none" url="/pages/poster/poster">
     <button type="warn">海报生成</button>
   </navigator>
+  <navigator hover-class="none" url="/pages/award/award">
+    <button type="warn">大转盘</button>
+  </navigator>
 </view>

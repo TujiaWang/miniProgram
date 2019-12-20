@@ -3,6 +3,7 @@
         "pages/index/index",
         "pages/auth/auth",
         "pages/open/open",
+        "pages/award/award",
         "pages/poster/poster"
     ],
     "window": {
@@ -11,7 +12,7 @@
         "navigationBarTitleText": "常用代码库",
         "navigationBarTextStyle": "black"
     },
-    "permission":{
+    "permission": {
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
         }

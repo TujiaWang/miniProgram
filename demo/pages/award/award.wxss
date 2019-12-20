@@ -1,0 +1,344 @@
+/* pages/personal/award/award.wxss */
+
+.wrapper {
+    position: relative;
+}
+
+.pagebg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.content {
+    position: relative;
+    z-index: 999;
+    padding: 400rpx 0 0;
+}
+
+.lottery {
+    width: 600rpx;
+    height: 600rpx;
+    margin: 0 auto;
+    position: relative;
+}
+
+.prize {
+    width: 600rpx;
+    height: 600rpx;
+    transform-origin: center center;
+    transition: all 4s ease-in-out;
+}
+
+.lottery-item {
+    width: 200rpx;
+    height: 200rpx;
+    transform-origin: 50% bottom;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 990;
+    margin-left: -100rpx;
+    padding-top: 100rpx;
+    font-size:24rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+
+.prize1 {
+    transform: rotate(60deg);
+}
+
+.prize2 {
+    transform: rotate(120deg);
+}
+
+.prize3 {
+    transform: rotate(180deg);
+}
+
+.prize4 {
+    transform: rotate(240deg);
+}
+
+.prize5 {
+    transform: rotate(300deg);
+}
+
+.lottery .turn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.lottery .pointer {
+    width: 154rpx;
+    height: 192rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -19rpx;
+    z-index: 999;
+}
+
+.leave-times {
+    width: 459rpx;
+    height: 101rpx;
+    margin: 103rpx auto 0;
+    position: relative;
+}
+
+.leave-times image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.leave-times view {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    height: 81rpx;
+    line-height: 81rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.leave-times view text {
+    color: #ffe92b;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 50rpx;
+}
+
+.box-title image {
+    width: 57rpx;
+    height: 20rpx;
+}
+
+.box-title text {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: rgba(246, 100, 54, 1);
+    margin: 0 30rpx;
+}
+
+.box {
+    margin: 0 25rpx;
+    background: rgba(255, 187, 110, 1);
+    border-radius: 16rpx;
+    padding: 20rpx;
+}
+
+.box-wrapper {
+    background: rgba(254, 252, 250, 1);
+    border-radius: 12rpx;
+    padding: 40rpx 0 30rpx;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+}
+
+.award-item text {
+    flex: 1;
+}
+
+.award-item text:first-child {
+    border-right: 1px solid transparent;
+    text-align: right;
+    padding-right: 25rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.award-item text:last-child {
+    border: none;
+    padding-left: 26rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(253, 122, 77, 1);
+}
+
+.award-more {
+    width: 300rpx;
+    margin: 40rpx auto 0;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    background: rgba(246, 104, 57, 1);
+    border-radius: 35rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(254, 252, 250, 1);
+}
+
+.people {
+    margin-top: 30rpx;
+}
+
+.people-list swiper {
+    height: 100rpx;
+}
+
+.people-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26rpx;
+}
+
+.people-list swiper-item .people-item:last-child {
+    margin-bottom: 0;
+}
+
+.people-item text {
+    flex: 1;
+}
+
+.people-item text:first-child {
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    border-right: 1px solid transparent;
+    text-align: right;
+    padding-right: 25rpx;
+}
+
+.people-item text:last-child {
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(253, 122, 77, 1);
+    padding-left: 26rpx;
+}
+
+.rule {
+    margin-top: 30rpx;
+}
+
+.rule .box-wrapper {
+    padding-bottom: 46rpx;
+}
+
+.rule-list {
+    padding: 0 30rpx 0 40rpx;
+}
+
+.rule-list view {
+    display: flex;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 36rpx;
+    margin-bottom: 30rpx;
+}
+
+.rule-list view:last-child {
+    margin-bottom: 0;
+}
+
+.padding {
+    height: 60rpx;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(124, 44, 44, 0.5);
+    z-index: 9999;
+}
+
+.pop-award {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600rpx;
+    z-index: 99999;
+    background: rgba(255, 193, 43, 1);
+    border: 3rpx solid rgba(255, 237, 119, 1);
+    border-radius: 16rpx;
+    padding: 40rpx;
+    box-sizing: border-box;
+}
+
+.gift-icon {
+    width: 600rpx;
+    height: 180rpx;
+    position: absolute;
+    top: -180rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close-icon {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 50%;
+    bottom: -120rpx;
+    transform: translateX(-50%);
+}
+
+.pop-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: rgba(204, 66, 20, 1);
+    padding-bottom: 30rpx;
+    text-align: center;
+}
+
+.pop-scroll {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 12rpx;
+}
+
+.scroll-view-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40rpx 40rpx 0;
+}
+
+.scroll-view-item:last-child {
+    padding-bottom: 40rpx;
+}
+
+.scroll-view-item text:first-child {
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.scroll-view-item text:last-child {
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(253, 122, 77, 1);
+}
+
+.result {
+    padding: 40rpx;
+    text-align: center;
+}

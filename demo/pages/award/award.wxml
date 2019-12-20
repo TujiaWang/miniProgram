@@ -1,0 +1,159 @@
+<!--pages/personal/award/award.wxml-->
+<!-- <web-view src="{{url}}"></web-view> -->
+<view class="wrapper">
+    <image src="../../images/award/bg_draw.png" class="pagebg"></image>
+    <view class="content">
+        <view class="lottery">
+            <view class="prize" style="transform:rotate({{turn}}deg)">
+                <view class="prize0 lottery-item">谢谢参与</view>
+                <view class="prize1 lottery-item">一等奖</view>
+                <view class="prize2 lottery-item">二等奖</view>
+                <view class="prize3 lottery-item">三等奖</view>
+                <view class="prize4 lottery-item">四等奖</view>
+                <view class="prize5 lottery-item">五等奖</view>
+                <image class="turn" src="../../images/award/turntable_draw.png"></image>
+            </view>
+            <image class="pointer" src="../../images/award/pointer_draw.png" bindtap="startLottery"></image>
+        </view>
+        <view class="leave-times">
+            <view>你今日还剩
+                <text>1</text>次抽奖机会</view>
+            <image src="../../images/award/bg_title_prompt.png"></image>
+        </view>
+        <view class="my-award box">
+            <view class="box-wrapper">
+                <view class="box-title">
+                    <image src="../../images/award/dress_title_left.png"></image>
+                    <text>我的奖品</text>
+                    <image src="../../images/award/dress_title_rignt.png"></image>
+                </view>
+                <view class="award-list">
+                    <view class="award-item">
+                        <text>2019.10.10</text>
+                        <text>电影抵扣券10元</text>
+                    </view>
+                </view>
+                <view class="award-more" bindtap="viewMyAward">查看全部奖品</view>
+            </view>
+        </view>
+        <view class="box people">
+            <view class="box-wrapper">
+                <view class="box-title">
+                    <image src="../../images/award/dress_title_left.png"></image>
+                    <text>中奖名单</text>
+                    <image src="../../images/award/dress_title_rignt.png"></image>
+                </view>
+                <view class="people-list">
+                    <swiper vertical="true" autoplay="true" circular="true">
+                        <swiper-item>
+                            <view class="people-item">
+                                <text>中奖人名称中奖人名称</text>
+                                <text>电影抵扣券</text>
+                            </view>
+                            <view class="people-item">
+                                <text>中奖人名称</text>
+                                <text>300元代金券</text>
+                            </view>
+                        </swiper-item>
+                        <swiper-item>
+                            <view class="people-item">
+                                <text>1111111</text>
+                                <text>2222222</text>
+                            </view>
+                            <view class="people-item">
+                                <text>3333333333</text>
+                                <text>4444444444</text>
+                            </view>
+                        </swiper-item>
+                    </swiper>
+                </view>
+            </view>
+        </view>
+        <view class="box rule">
+            <view class="box-wrapper">
+                <view class="box-title">
+                    <image src="../../images/award/dress_title_left.png"></image>
+                    <text>我的奖品</text>
+                    <image src="../../images/award/dress_title_rignt.png"></image>
+                </view>
+                <view class="rule-list">
+                    <view>
+                        <text>1、</text>
+                        <text>活动时间：2019.01.01-2019.11.11</text>
+                    </view>
+                    <view>
+                        <text>2、</text>
+                        <text>获奖后优惠券直接发放，可在个人中心的优惠券直接查看</text>
+                    </view>
+                    <view>
+                        <text>3、</text>
+                        <text>用户每日首次登录可获取1次抽奖机会</text>
+                    </view>
+                    <view>
+                        <text>4、</text>
+                        <text>每日抽奖机会最多为无数次</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="padding"></view>
+    </view>
+</view>
+<view class="mask" wx:if="{{mask}}" bindtap="hiddenPop"></view>
+<view class="pop-award" wx:if="{{myAward}}">
+    <image class="gift-icon" src="../../images/award/gift_popup.png"></image>
+    <view class="pop-content">
+        <view class="pop-title">我的奖品</view>
+        <view class="pop-scroll">
+            <scroll-view scroll-y="true" style="height: 600rpx;" bindscrolltolower="loadMore">
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+                <view class="scroll-view-item">
+                    <text>2019.10.10</text>
+                    <text>电影抵扣券10元</text>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <image class="close-icon" src="../../images/award/icon_del_popup.png" bindtap="hiddenPop"></image>
+</view>
+<view class="pop-award" wx:if="{{result}}">
+    <image class="gift-icon" src="../../images/award/gift_popup.png"></image>
+    <view class="pop-content">
+        <view class="pop-title">抽奖结果</view>
+        <view class="pop-scroll">
+            <view class="result">{{level}}</view>
+        </view>
+    </view>
+    <image class="close-icon" src="../../images/award/icon_del_popup.png" bindtap="hiddenPop"></image>
+</view>
