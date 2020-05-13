@@ -14,7 +14,7 @@ class Validate {
    * 策略定义，可根据自己项目情况添加
    */
   initMethods() {
-    var that = this;
+    var self = this;
     this.methods = {
       required(value) {
         return value.replace(/^\s+|\s+$/g, '')
@@ -25,6 +25,12 @@ class Validate {
       checkPhone(value) {
         return /^1[0-9]\d{9}$/.test(value)
       },
+      checkNumber(value){
+        return /^[0-9]*$/.test(value)
+      },
+      checkPrice(value){
+        return /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/.test(value)
+      },
       equalItem(value, param) {
         return value == param
       },
@@ -32,11 +38,10 @@ class Validate {
         return value != param
       },
       idcard(value) {
-        console.log(that)
-        if (that.checkCode(value)) {
+        if (self.checkCode(value)) {
           var date = value.substring(6, 14);
-          if (that.checkDate(date)) {
-            if (that.checkProv(value.substring(0, 2))) {
+          if (self.checkDate(date)) {
+            if (self.checkProv(value.substring(0, 2))) {
               return true;
             }
           }
