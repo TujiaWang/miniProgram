@@ -1,0 +1,2 @@
+<!--pages/test/test.wxml-->
+<canvas canvas-id="lottery"></canvas>

@@ -1,0 +1,6 @@
+/* pages/test/test.wxss */
+canvas{
+  width: 600rpx;
+  height: 600rpx;
+  margin: 0 auto;
+}
