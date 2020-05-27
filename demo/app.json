@@ -1,9 +1,10 @@
 {
     "pages": [
+        "pages/award/award",
+        "pages/test/test",
         "pages/index/index",
         "pages/auth/auth",
         "pages/open/open",
-        "pages/award/award",
         "pages/poster/poster"
     ],
     "window": {
