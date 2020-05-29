@@ -3,6 +3,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-.menus navigator{
+.menus button{
     margin: 20rpx;
 }
