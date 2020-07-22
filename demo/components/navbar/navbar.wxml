@@ -1,0 +1,19 @@
+<!--components/navbar/navbar.wxml-->
+<view style="height:{{navTop+navHeight}}px" wx:if="{{options.isHidden}}"></view>
+<view class='topbar' style="background:{{options.bgcolor}}">
+  <view class='status' style="height:{{navTop}}px"></view>
+  <view class='navbar' style="height:{{navHeight}}px">
+    <view class="navbar_left">
+      <view class="icon_back" bindtap="backPrev"><image src="./icon_back.png"></image></view>
+      <view class="navbar_line"></view>
+      <view class="icon_more" bindtap="showMenuList">
+        <image class="icon_parent" src="./icon_drop.png"></image>
+        <view class="submenu" wx:if="{{isDrop}}">
+          <view catchtap="doComplaint"><image src="./icon_comp.png"></image><text>投诉</text></view>
+          <view catchtap="doCollect"><image src="./{{isCollect?'icon_liked':'icon_collect'}}.png"></image><text>收藏</text></view>
+          <view><button open-type="share"><image src="./icon_share.png"></image><text>分享</text></button></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
