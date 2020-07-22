@@ -14,6 +14,9 @@
   </navigator>
   <button bindtap="chooseLocation">选择位置</button>
   <button bindtap="openLocation" data-lat="30.49984" data-lot="114.34253">打开导航</button>
+  <navigator hover-class="none" url="/pages/navbar/navbar">
+    <button>自定义导航</button>
+  </navigator>
 </view>
 
 <view>{{address}}</view>

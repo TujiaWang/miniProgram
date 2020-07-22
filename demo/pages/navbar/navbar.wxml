@@ -1,0 +1,3 @@
+<!--pages/navbar/navbar.wxml-->
+<navbar isCollect="{{isCollect}}" />
+<text>pages/navbar/navbar.wxml</text>
